@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .about-page .header-content {
+  background: url('background-image-about.jpg') center center/cover no-repeat;
+}
+
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ .nav-bar ul{
+    display: flex;
+    align-items: center;
+     margin-left: 19rem;
+    font-weight: 600;
+    justify-content: flex-end;
+  }
+.nav-bar ul li a{
+     cursor: pointer;
+     transition: all 0.3s ease-in-out;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+.active-service{
+    padding: .4rem;
+    border-radius: .5rem;
+    background-color: #000;
+ }
+.header-section{
+    width: 100%;
+    height: auto;
+ }
+
+.header-content {
+  background: url('background-image-about.jpg') center center/cover no-repeat;
+  min-height: 80vh; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-top: 1.5rem;
+  border-radius: 1.5rem;
+}
+.header-title{
+    font-family: "Poetsen One";
+    font-weight: 600;
+    font-size: 2rem;
+     margin-bottom: 1rem;
+    text-align: center;
+}
+.header-text{
+    font-family: "Cal Sans";
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: #000000;
+    text-align: center;
+    text-align: center;
+    width: 100%;
+    line-height: 2rem;
+}
+.header-button{
+    text-decoration: underline;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #d10000;
+  color: #fff;
+  cursor: pointer;
+   width: 25%; 
+}
+ 
+/* specail Section */
+.specail-section{
+    margin-top: 4rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+.specail-header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poetsen One";
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+.card-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.specail-card{
+    width: 35rem;
+    height: 15rem;
+    margin: 1rem;
+    padding: 3rem 0 0 0;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+.specail-icons{
+    width: 10%;
+    height: auto;
+    font-size: 3rem;
+    display: flex;
+     margin: 0rem 0 0 1rem;
+    justify-content: center;
+}
+.specail-title{
+    width: 90%;
+    height: auto;
+    display: flex;
+    line-height: 2rem;
+    flex-direction: column;
+    padding: 0rem 0 0 2rem;
+
+}
+/* specail Section */
+
+/* number Section */
+.number-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+ }
+.number-header{
+    font-family: "Poetsen One";
+    font-weight: 600;
+    font-size: 2rem;
+}
+.number-container{
+    width: 70%;
+    height: auto;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.number-card{
+     height: auto;
+    margin: .5rem;
+    padding: 1rem 0 0 0;
+    border-radius: .5rem;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+    justify-content: center;
+}
+.number-icon{
+    font-size: 1.5rem;
+}
+.number-title{
+    font-weight: 700;
+    font-family: "Poetsen One";
+    font-size: 2rem;
+}
+.number-description{
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: "Cal Sans";
+    text-transform: capitalize;
+}
+/* number Section */
+.sup{
+    color: #575dff;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+.sub{
+    text-transform: uppercase;
+    color: #575dff;
+    font-weight: bold;
+    font-size: 1.3rem;
+}

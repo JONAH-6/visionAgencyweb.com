@@ -1,0 +1,1448 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+ /* Add to your main CSS file */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+#backToTop:hover {
+  background: #555;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+     color: #333;
+}
+.header-section{
+    background-color: #ffff;
+    width: 100%;
+    height: 200vh;
+}
+.navigation{
+    background: linear-gradient(to right, rgb(37, 36, 36), white);
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+      
+ }
+ .logo{
+    display: flex;
+    align-items: center;
+     margin-left: 2rem;
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+ }
+.heading-logo{
+    font-size: 2rem;
+    color: #9c9c9c;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: flex;
+    cursor: pointer;
+      
+}
+.heading-logo-sub{
+    cursor: pointer;
+    color: #575dff;
+    font-weight: bolder;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ .nav-bar ul{
+    display: flex;
+    align-items: center;
+    gap:3rem;
+    font-weight: 600;
+    justify-content: flex-end;
+  }
+.nav-bar ul li a{
+    cursor: pointer;
+     color: #525252;
+    transition: all 0.3s ease-in-out;
+    text-transform: capitalize;
+}
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #d10000;
+  cursor: pointer;
+  margin-left: 1rem;
+  z-index: 1001;
+}
+.sidebar-menu {
+  position: fixed;
+  top: 5rem;
+  right: -100%;
+  width: 100%;
+  height: 55vh;
+  background: #fff;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, rgba(37, 36, 36, 0.938), rgba(255, 255, 255, 0.5));
+  gap: 2rem;
+  padding: 4rem 2rem 2rem 2rem;
+  transition: right 0.4s cubic-bezier(.77,0,.18,1);
+  z-index: 999;
+  list-style: none;
+}
+.sidebar-menu li a{ 
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+.sidebar-menu li a:hover {
+  color: #d10000;
+}
+
+.sidebar-menu.active {
+  right: 0;
+}
+.sidebar-menu {
+  display: flex;
+}
+
+/** header-section **/
+.shimmer-text {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    #222 0%,
+    #fff 40%,
+    #ffe066 50%,
+    #fff 60%,
+    #d11616 60%,
+    #222 100%
+  );
+  background-size: 200% auto;
+  color: #222;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.header-content {
+  background: url('glasses-lie-laptop-reflecting-light-from-screen-dark.jpg') center center/cover no-repeat;
+  min-height: 80vh; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-top: 1.5rem;
+  border-radius: 1.5rem;
+}
+.header-writing{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-color: #3333336e;
+}
+
+.header-title,
+.header-text,
+.header-buttons {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-size: 2rem;
+}
+.header-title{
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: "Poetsen One";
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.header-button {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #d10000;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.header-button.active {
+  background: #575dff;
+}
+.header-image{
+    display: flex;
+    position: absolute;
+    justify-content: right;
+    align-items: center;
+   }
+.desktop-img {
+  display: block;
+  background-repeat: no-repeat;
+}
+.mobile-img {
+  display: none;
+}
+
+ 
+/** end-section **/
+
+/** company section **/
+
+.company-section{
+    width: 100%;
+    height: 30vh;
+    background-color:  rgb(37, 36, 36);
+    display: flex;
+    align-items: center;
+  }
+
+ .company-container{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background: linear-gradient(to right, rgb(37, 36, 36), #fff, #fff, white);
+ }
+ 
+ .header-company {
+    color: #fff;
+     font-size: 2rem;
+    margin-left: .3rem;
+    font-family: "Poetsen One";
+ }
+ .company-images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+ }
+/** end of company section **/
+
+
+/** service section **/
+.service-section{
+    width: 100%;
+    height: 140vh;
+    background-color:  white;
+ }
+.service-container-header {
+    display: flex;
+     align-items: center;      
+    justify-content: center;   
+     gap: 0.5rem;               
+    padding: 1rem 0;
+    width: 50%;
+    margin: auto;
+}
+.service-sub-header {
+    margin: 0;                 
+    padding: 0;
+     
+}
+.service-header {
+     font-size: 2rem;
+    font-weight: 900;
+     font-family: "Poetsen One";
+     
+}
+.service-container-header p {
+    margin: 0rem 0;
+    font-size: 1.3rem;
+    font-family: "Cal Sans";
+}
+.service-container{
+    width: 100%;    
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+ }
+.service-card{
+    width: 30%;
+    height: 40vh;
+    margin-top: 3rem;
+    padding: 1rem;
+     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+ }
+ .service-title{
+     font-family: "Poetsen One";
+     font-size: 2rem;
+     font-weight: 900;
+     text-transform:uppercase;
+  }
+ .service-texts{
+    font-family: "Cal Sans";
+    font-size: 1.1rem;
+     text-transform: capitalize;
+ }
+ .service-btn{
+    width: 50%;
+    padding: 0.7rem .2rem;
+    border-radius: 5px;
+    background: transparent;
+    color: #d10000;                 
+    border: none;
+    font-weight: 600;
+    font-family: "Luckiest Guy";
+    cursor: pointer;
+    margin-top: .7rem; 
+    align-self: center;  
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/** end of service section **/
+
+
+
+
+
+
+
+/** template section **/
+.template-section{
+    width: 100%;
+    height: 200vh;
+    background-color: #ffffff;
+    padding: 3rem 0;
+}
+.header-template{
+    width: 100%;
+    height: 10vh;
+    display: block;
+    text-align: right;
+    font-family: "Poetsen One";
+    font-weight: 600;
+
+}
+
+.template-text{
+    color: rgba(94, 0, 0, 0.356);
+    font-weight: lighter;
+    font-size: 1rem;
+    font-family: "cal Sans";
+    
+}
+.template-title{
+    font-family: "Poetsen One";
+}
+.template-description{
+    font-family: "Cal Sans";
+    font-size: 1.1rem;
+    color: #333333;
+ }
+.template-container {
+    display: flex;
+    justify-content:center;  
+     margin-top: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+
+.template-card {
+      padding: 1.5rem;
+     display: block;
+     width: 29%;
+     height: 20%;
+     border: 1px solid #ccc;
+     border-right: 0;
+     
+}
+ 
+.active-card{
+    background: none;
+    top: 0;
+    bottom: 0;
+    width: 24%;
+    height: 24%;
+    margin-top: 5rem;
+    border: none;
+}
+.template-button-active-template{
+    width: 100%;
+    background: linear-gradient(to left, rgb(255, 255, 255), white, rgb(255, 127, 127));
+     display: block;
+    padding: 1rem;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    font-family: "Luckiest Guy";
+}
+.template-button{
+    width:8rem;
+    height: 2.5rem;
+    color: #f8f7f7;
+    background-color:  rgb(255, 127, 127);
+    border: none;
+    border-radius: 5px;
+    font-size: .8rem;
+    font-weight: 600;
+    transition: all 1s ease-in-out;
+    margin-top: 2rem;
+    font-family: "Luckiest Guy";
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.template-button:hover{
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+    cursor: pointer; 
+}
+ 
+.template-card:hover .template-button {
+    margin-left: -1rem;
+    transition: margin-left 0.3s;
+}
+.template-image {
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.template-card:hover .template-image {
+    transform: scale(1.05);
+}
+/** end of template section **/
+
+/** price section **/
+.price-section{
+    width: 100%;
+    height: 200vh;
+     padding: 3rem 0;
+}
+.header-price{
+    width: 100%;
+     display: block;
+    font-family: "Poetsen One";
+    font-weight: 600;
+    color: #333;
+}
+.price-text{
+    width: 100%;
+    height: 5vh;
+    display: block;
+     font-family: "Cal Sans";
+    font-weight: 400;
+}
+.price-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.price-card {
+    width: 40%;           
+    min-width: 320px;  
+    max-width: 500px;      
+    margin-bottom: 2rem;   
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+     /* Remove flex-direction: ; (invalid) */
+}
+.price-title{
+    font-family: "Poetsen One";
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 2rem;
+    color: #333;
+}
+.price-amount{
+    font-family: "Luckiest Guy";
+    font-size: 2rem;
+    font-weight: 700;
+    color:  rgb(255, 127, 127);
+}
+.price-button{
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color:  rgb(255, 127, 127);
+    color: white;
+    font-family: "Luckiest Guy";
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.price-button:hover{
+    background-color: rgb(255, 127, 127);
+}
+.price-description{
+    text-align: left;
+    justify-items: legacy;
+    padding-top: .5rem;
+    color: #333;
+    
+}
+
+.price-features{
+   font-family: "Luckiest Guy";
+   margin:1rem;
+
+}
+.price-features i{
+   width: 5%;
+}
+ 
+
+/** end price section **/
+
+
+/** end price section **/
+.testimonials-section{
+    width: 100%;
+    height: 120vh;
+    padding: 3rem 0;
+     background-color: rgba(255, 127, 127, 0.568);
+}
+.testimonials-title{
+    width: 100%;
+    text-align: center;
+    font-family: "Poetsen One";
+    font-weight: 600;
+    color: #333;
+    font-size: 2rem;
+}
+/* ...existing code... */
+
+.testimonails-container {
+    width: 80%;
+    max-height: 500px;
+    overflow-y: auto;
+    background-color: white;
+    color: rgb(97, 28, 28);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: auto;
+    border-radius: 3rem;
+    box-shadow:inset -10rem .1rem 1rem .1rem rgba(51, 49, 49, 0.562),
+                inset 10rem .2rem 1rem 1rem rgba(255, 127, 127, 0.568);
+    padding: 2rem 0 2rem 0;
+    gap: 1rem;
+}
+.testimonails-container::-webkit-scrollbar{
+    display: none;
+}
+ 
+.testimonial-card {
+     display: flex;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1.2rem 1.5rem;
+     gap: 1rem;
+    position: relative;
+ }
+
+.testimonial-card.left {
+    margin-left: 2rem;
+    margin-right: auto;
+    flex-direction: row;
+}
+
+.testimonial-card.right {
+    margin-left: auto;
+    margin-right: 2rem;
+    flex-direction: row-reverse;
+    background: #ffeaea;
+}
+
+.testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 0.2rem;
+}
+
+.testimonial-content {
+    flex: 1;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #d10000;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.testimonial-text {
+    font-size: 1.05rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+}
+/** end price section **/
+
+/** end testimonials section **/
+
+
+/** faqs section **/
+.faqs-section{
+    width: 100%;
+    height: 160vh;
+    padding: 3rem 0;
+      background-color: rgba(255, 127, 127, 0.568);
+}
+.faqs-container{
+     display: flex;
+     justify-content: center;
+    align-items: center;
+     gap: 1rem;
+}
+.faqs-container-header{
+    gap: 0.5rem;
+    padding: 1rem 0;
+    width: 50%;
+    margin: auto;
+    padding-left: 2rem;
+}
+.sup-heading{
+    margin: 0;                 
+    padding: 0;
+    font-family: "Poetsen One";
+    font-weight: 600;
+    font-size: 3rem;
+ }
+.faqs-text{
+    margin: 0;
+    padding: 0;
+    font-family: "Cal Sans";
+    font-weight: 400;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+}
+.faqs-button{
+    width: 100%;
+    height: 3rem;
+    color: #f8f7f7;
+    background-color: #d10000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 1s ease-in-out;
+    margin-top: 2rem;
+    font-family: "Luckiest Guy";
+    cursor: pointer;
+}
+
+
+.faqs-container-anwers{
+    width: 50%;
+    height: 100vh;
+     background-color: transparent;
+    border-radius: 10px;
+}
+.faqs-card{
+    padding: .8rem;
+    width: 100%;
+    height: auto;
+     background-color: rgba(255, 127, 127, 0.568);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: .1rem solid #d100007e;
+}
+.faqs-card.faqs-active{
+    background-color: #fff;
+     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.faqs-question{
+    font-family: "Poetsen One";
+     font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+}
+.faqs-icons{
+    font-size: 1.5rem;
+    top: 0;
+    margin-left: auto;
+    margin-right: 2rem;
+    color: #d10000;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.faqs-icons:hover{
+    transform: rotate(180deg);
+}
+/** end faqs section **/
+
+
+/** contact section **/
+
+.contact-section{
+    width: 100%;
+    height: 140vh;
+    background-color: #f8f7f7;
+    color: #333;
+    padding: 3rem 0;
+
+}
+.contact-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+.contact-location {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-rows: 1fr 1fr;
+    gap: .3rem; /* space between items */ 
+      
+}
+.contact-address{
+    width: 80%;
+    height: 90%;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12); /* shadow */
+    padding: 2rem;
+    margin: auto;
+    display: flex;
+}
+.contact-subtitle{
+    font-family: "Poetsen One";
+    font-weight: 600;
+    display: block;
+ }
+.contact-icons{
+    font-size: 1.5rem;
+    color: #d10000;
+    margin-right: 1rem;
+    font-size: 2rem;
+    width: 10%;
+    transition: color 0.3s ease-in-out;
+}
+.contact-icons:hover {
+    color: #a80000;
+}
+
+.contact-details{
+    display: block;
+    font-family: "Cal Sans";
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #333;
+ }
+ .contact-details:hover{
+    color: #d10000;
+ }
+.contact-details.email{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.contact-details.socail a:hover{
+    color: #d10000;
+    transition: color 0.3s ease-in-out;
+}
+.contact-details.socail a{
+    cursor: pointer;
+    letter-spacing: 1rem;
+    font-size: 1.5rem;
+    color: black;
+}
+
+
+
+
+.contact-form{
+    width: 90%;
+    height: 60%;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12); /* shadow */
+    padding: 2rem;
+    margin:2rem auto;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.form-input {
+    flex: 1;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    outline: none;
+}
+.form-input:hover{
+    border: 1px solid #a80000;
+    transition: .4s ease-in-out;
+}
+
+.form-input-block {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form-textarea {
+    width: 100%;
+    height: 10rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    resize: vertical;
+    outline: none;
+}
+.form-textarea:hover {
+    transition: .4s ease-in-out;
+    border: 1px solid #a80000;
+}
+.form-button {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    border: none;
+    background: #d10000;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition:0.3s;
+}
+
+.form-button:hover {
+    background: #a80000;
+}
+/** end contact section **/
+
+
+/** end contact section **/
+.footer-section{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to right, rgb(37, 36, 36),#525252, #9c9c9c);
+    color: #ccc;
+    padding: 3rem 0;
+}
+.footer-header{
+    text-align: center;
+    font-family: "Poetsen One";
+    font-weight: 600;
+}
+.footer-discription{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    font-family: "Cal Sans";
+    font-weight: 400;
+}
+
+.footer-container{
+    display: flex;
+     align-items: center;
+ 
+}
+.menu-section{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.menu-heading{
+    font-family: "Poetsen One";
+    font-weight: 600;
+    font-size: 1.5rem;
+ }
+ .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.menus{
+    list-style: none;
+}
+.menus{
+    cursor: pointer;
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease-in-out;
+}
+.menus:hover{
+    color: #d10000;
+}
+
+.footer-service-section{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.footer-service-heading{
+    font-family: "Poetsen One";
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.footer-service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     gap: 1rem;
+     padding: 1rem;
+}
+.footer-services{
+    list-style: none;
+}
+.footer-services{
+    cursor: pointer;
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease-in-out;
+}
+.footer-services:hover{
+    color: #d10000;
+}
+
+.footer-copyright{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cal Sans";
+    font-weight: 400;
+    color: #ccc;
+}
+
+.footer-copyright p{
+    margin: 0;
+    font-size: 1rem;
+}
+.footer-social{
+    display: flex;
+    gap: 10rem;
+    font-size: 2rem;
+    justify-content: center;
+}
+.footer-social a{
+    color: #ccc;
+    transition: color 0.3s ease-in-out;
+}
+hr{
+    width: 80%;
+    margin: 2rem auto;
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+ }
+/** end contact section **/
+
+/** responsive **/
+/** navigational-section responsive **/
+@media (max-width: 1200px) {
+    .navigation{
+        position: fixed;
+        top: 0;
+        z-index: 99999 !important;
+    }
+  .nav-bar { display: none !important; position: fixed;}
+  .nav-toggle { display: block !important;margin-left: 15rem; }
+  .sidebar-menu{
+        display: flex !important;
+         
+    }
+    .header-content{
+        width: 100%;
+        height:auto;
+     }
+     .header-section{
+        width: 100%;
+        height: auto;
+     }
+
+}
+@media (min-width: 1210px) {
+  .nav-bar { display: flex !important; }
+  .nav-toggle { display: none !important; }
+  .sidebar-menu { display: none !important; }
+
+  .header-section{
+    width: 100%;
+    height: 100vh;
+  }
+}
+/** end of navigational-section responsive **/
+@media (max-width: 900px) {
+   .nav-toggle 
+   { display: block !important;
+     margin-left: auto;
+     margin-right: 2rem;
+      
+   }
+   .heading-logo{
+    color: #fff;
+    font-size: 1.3rem;
+   }
+    .logo-image{
+        display: none;
+    }
+    .header-section{
+        width: 100%;
+         height: auto;
+        background-color: #7e6060;
+    }
+
+    .header-content{
+        width: 100%;
+        height: auto;
+     }
+    .header-title{
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .header-text{
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+    .header-button{
+        width: 12rem;
+        height: 3rem;
+        font-size: 1rem;
+        margin-top: 2rem;
+     }
+     .header-buttons{
+        display: flex;
+        justify-content: space-between;
+     }
+    .header-image{
+        margin-top: 1rem;
+        position: relative;
+        justify-content: center;
+    }
+}
+/** end header-section responsive **/
+
+/** company-section responsive **/
+@media screen and (max-width: 900px) {
+    .company-section{
+        background-color:  rgb(37, 36, 36);
+        display: block; 
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+    }
+    .header-company{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .company-container{
+        width: 90%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-top: .8rem;
+    }
+    .company-images{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+/** end of company-section responsive **/
+
+
+/** service-section responsive **/
+@media screen and (max-width: 900px) {
+    .service-section{
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+    }
+    .service-container-header{
+        width: 90%;
+        margin: auto;
+        text-align: left;
+    }
+    .service-header{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    .header-title{
+        line-height: 5rem;
+        padding: 1rem;
+        border-radius: .5rem;
+        font-size: 2rem;
+        background-color: #9c9c9c;
+        
+    }
+    .desktop-img {
+    display: none;
+  }
+ 
+ 
+    .service-container{
+        width: 100%;
+        display: grid;
+        gap: .5rem; /* space between items */
+        grid-template-columns: 1fr 1fr; /* 2 columns */
+        grid-template-rows: 1fr 1fr;
+    }
+    .service-card{
+        width: 100%;
+        height: auto;
+        margin-top: 1rem;
+    }
+
+}
+/** end of service-section responsive **/
+
+ /** template-section responsive **/
+@media screen and (max-width: 900px) {
+    .template-section{
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+    }
+ 
+    .template-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    .template-card {
+        width: 100%;
+        height: auto;
+    }
+    .template-button-active-template {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+/** end of template-section responsive **/
+
+/** tesmonail-section responsive **/
+    .testimonials-section{
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+    }
+    .testimonials-title{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .testimonails-container {
+        width: 90%;
+        max-height: 500px;
+        overflow-y: auto;
+        margin: auto;
+    }
+    .testimonial-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonial-avatar {
+        margin-bottom: 1rem;
+    }
+}
+/** end of tesmonail-section responsive **/
+
+
+/** faqs-section responsive **/
+@media screen and (max-width: 900px) {
+    .faqs-section{
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+    }
+    .faqs-container{
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
+    .faqs-container-header{
+        width: 100%;
+        text-align: center;
+    }
+    .sup-heading{
+        font-size: 1.5rem;
+    }
+    .faqs-text{
+        font-size: 1.1rem;
+    }
+    .faqs-container-anwers{
+        width: 100%;
+        height: auto;
+    }
+    .faqs-card{
+        width: 100%;
+        height: auto;
+    }
+}
+/** end of faqs-section responsive **/
+
+/** contact-section responsive **/
+@media screen and (max-width: 900px) {
+    .contact-section{
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+    }
+    .contact-container{
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
+    .contact-location{
+        grid-template-columns: 1fr; /* single column */
+        grid-template-rows: auto; /* rows will adjust based on content */
+    }
+    .contact-address, .contact-form{
+        width: 90%;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+    .form-row {
+        flex-direction: column; /* stack inputs vertically */
+    }
+}
+/** end of contact-section responsive **/
+
+/** -section responsive **/
+@media (max-width:680px) {
+
+        .service-section{
+            height: auto;
+        }
+        .service-container-header{
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            display: block;
+            flex-wrap: wrap;
+
+        }
+        
+        .service-sub-header {
+            text-align: center;
+            display: block;
+            font-size: 1.5rem;
+        }
+        .service-header {
+            text-align: center;
+            font-size: 1.5rem;
+        }  
+        .service-container{
+            width: 90%;
+            display: grid;
+            gap: .5rem; /* space between items */
+            grid-template-columns: 1fr; /* single column */
+            grid-template-rows: auto; /* rows will adjust based on content */
+        }
+        .service-card{
+            width: 100%;
+            height: auto;
+            margin-top: 1rem;
+        }
+/** price   -section responsive **/
+        .price-card {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem auto;
+        }
+        .price-container {
+            display: grid;
+            grid-template-columns: 1fr; /* single column */
+            grid-template-rows: auto; /* rows will adjust based on content */
+            gap: 1rem;
+            width: 90%;
+            margin: 1rem auto;
+        }
+        
+}
+/** end of contact-section responsive **/
+
+/** end of contact-section responsive **/
+ /** header-section-section responsive **/
+
+@media (max-width: 500px) {
+
+     .header-section{
+        display: block;
+        width: 100%;
+        height: auto;  
+     }
+     .header-content{
+        display: block;
+      }
+     .header-title{
+        font-size: 1.2rem;
+        line-height: 2rem;
+     }
+     .header-text{
+        font-size: 1.2rem;
+        width: 100%;
+     }
+ /** end of header-section responsive **/
+     .header-buttons{
+        display: block;
+        justify-content: center;
+        margin: 2rem 0;
+       }
+      .header-button{
+        margin: auto;
+        justify-content: center;
+        display: block;
+        font-size: .8rem;
+        }
+      .header-button.active{
+         margin-top: 1rem;
+      }
+ 
+ /** contact-section responsive **/
+      .contact-section{
+        width: 100%;
+        height: auto;
+      }
+      .contact-address{
+        width: 80%;
+        height: auto;
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+    .contact-details{
+        font-size: 1rem;
+    }
+ 
+ /** end of header-section responsive **/
+    .footer-section{
+         height: auto;
+        padding: 2rem 0;
+    }
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-section, .footer-service-section{
+        width: 100%;
+        text-align: center;
+    }
+    .menu, .footer-service{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .footer-social{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+.specail-card{
+    width: 34rem;
+    height: 20rem;
+    margin: 1rem;
+    padding: 3rem 0 0 0;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+.specail-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+ }
+}
+/** end of contact-section responsive **/
+ 
+ /**end of  responsive **/

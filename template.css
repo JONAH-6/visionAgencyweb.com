@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.active-template{
+    padding: .4rem;
+    border-radius: .5rem;
+    background-color: #fff;
+}
+.header-image{
+    bottom:4rem;
+}
